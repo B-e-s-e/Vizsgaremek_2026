@@ -16,7 +16,7 @@ Route::put('/autok/update/{id}', [AutoController::class, 'update']);
 Route::delete('/autok/delete/{id}', [AutoController::class, 'destroy']);
 
 Route::get('/felhasznalok', [FelhasznaloController::class, 'index']);
-Route::get('/felhasznalok/getByName', [FelhasznaloController::class, 'getByName']);
+Route::get('/felhasznalok/getByName', [FelhasznaloController::class, 'searchByName']);
 Route::post('/felhasznalok', [FelhasznaloController::class, 'store']);
 Route::put('/felhasznalok/update/{id}', [FelhasznaloController::class, 'update']);
 Route::delete('/felhasznalok/delete/{id}', [FelhasznaloController::class, 'destroy']);

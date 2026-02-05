@@ -28,7 +28,7 @@ class TakaritoController extends Controller
         }
 
         $takarito = Takarito::create($request -> all());
-        return response() -> json(['Új takarító létrehozva. Név:' => $felhasznalo -> nev], 201);
+        return response() -> json(['Új takarító létrehozva. Név:' => $takarito -> nev], 201);
     }
 
     public function update(Request $request, $id){
@@ -49,7 +49,7 @@ class TakaritoController extends Controller
                 return response()->json(['Hibaüzenet'=>'Valamelyik kötelező adat hiányzik'],406);
             }
             else{
-                $takarito -> update($request);
+                $takarito -> update($request ->all());
                 return response() -> json(['Takarító sikeresen frissítve:' => $takarito -> nev], 206);
             }
 
@@ -68,13 +68,13 @@ class TakaritoController extends Controller
     }
 
     public function destroy($id){
-        $takarito = Felhasznalo::find($id);
+        $takarito = Takarito::find($id);
         if(is_null($takarito)){
             return response('A törölni kívánt takarító nem található.', 404);
             
         }
         else{
-            $felhasznalo -> delete();
+            $takarito -> delete();
             return response('Takarító eltávolítva az adatbázisból.', 202);
         }
     }

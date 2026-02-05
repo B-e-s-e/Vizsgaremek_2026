@@ -49,7 +49,7 @@ class AutoController extends Controller
             
         }
         else{
-            return response() -> json(['Hiba:' => 'Nincs regisztrálva autó ezzel a rendszámmal.'], 404);
+            return response() -> json(['Hiba:' => 'Nincs regisztrálva autó ilyen nevű tulajdonossal.'], 404);
         }
     }
 
@@ -76,7 +76,7 @@ class AutoController extends Controller
                 return response()->json(['Hibaüzenet'=>'Valamelyik kötelező adat hiányzik'],406);
             }
             else{
-                $auto -> update($request);
+                $auto -> update($request -> all());
                 return response() -> json(['Autó sikeresen frissítve:' => $auto -> rendszam], 206);
             }
 

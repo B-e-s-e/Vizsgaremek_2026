@@ -52,7 +52,7 @@ class FelhasznaloController extends Controller
                 return response()->json(['Hibaüzenet'=>'Valamelyik kötelező adat hiányzik'],406);
             }
             else{
-                $felhasznalo -> update($request);
+                $felhasznalo -> update($request ->all());
                 return response() -> json(['Felhasználó sikeresen frissítve:' => $felhasznalo -> nev], 206);
             }
 
@@ -71,7 +71,7 @@ class FelhasznaloController extends Controller
     }
 
     public function destroy($id){
-        $fehasznalo = Felhasznalo::find($id);
+        $felhasznalo = Felhasznalo::find($id);
         if(is_null($felhasznalo)){
             return response('A törölni kívánt felhasználó nem található.', 404);
             

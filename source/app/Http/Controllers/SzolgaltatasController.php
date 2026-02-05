@@ -27,14 +27,14 @@ class SzolgaltatasController extends Controller
             return response()->json(['Hibaüzenet'=>'Valamelyik kötelező adat hiányzik'],406);
         }
 
-        $szogaltatas = Szolgaltatas::create($request -> all());
+        $szolgaltatas = Szolgaltatas::create($request -> all());
         return response() -> json(['Új szolgáltatás létrehozva. Dátum:' => $szolgaltatas -> munka -> datum], 201);
     }
 
     public function getByPrice(Request $request){
         $szolgaltatas = Szolgaltatas::where('ar', '=', $request -> ar);
-        if($szogaltatas -> exists()){
-            return $szogaltatas -> get();
+        if($szolgaltatas -> exists()){
+            return $szolgaltatas -> get();
         }
         else{
             return response() -> json(['Hiba:' => 'Nem található a keresésnek megfelelő szolgáltatás.'], 404);
@@ -43,7 +43,7 @@ class SzolgaltatasController extends Controller
 
     public function update(Request $request, $id){
         $szolgaltatas = Szolgaltatas::find($id);
-        if(is_null($szogaltatas)){
+        if(is_null($szolgaltatas)){
             return response() -> json(['Hiba:' => 'Nem található a frissíteni kívánt szolgáltatás.'], 404);
         }
         else{
@@ -59,8 +59,8 @@ class SzolgaltatasController extends Controller
                 return response()->json(['Hibaüzenet'=>'Valamelyik kötelező adat hiányzik'],406);
             }
             else{
-                $szogaltatas -> update($request);
-                return response() -> json(['Szolgáltatás sikeresen frissítve:' => $szogaltatas -> munka -> datum], 206);
+                $szolgaltatas -> update($request ->all());
+                return response() -> json(['Szolgáltatás sikeresen frissítve:' => $szolgaltatas -> munka -> datum], 206);
             }
 
             
@@ -69,7 +69,7 @@ class SzolgaltatasController extends Controller
 
     public function destroy($id){
         $szolgaltatas = Szolgaltatas::find($id);
-        if(is_null($szogaltatas)){
+        if(is_null($szolgaltatas)){
             return response('A törölni kívánt szolgáltatás nem található.', 404);
             
         }

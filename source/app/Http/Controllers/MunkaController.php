@@ -69,7 +69,7 @@ class MunkaController extends Controller
                 return response()->json(['Hibaüzenet'=>'Valamelyik kötelező adat hiányzik'],406);
             }
             else{
-                $munka -> update($request);
+                $munka -> update($request -> all());
                 return response() -> json(['Munka sikeresen frissítve:' => $munka -> datum], 206);
             }
 
@@ -84,7 +84,7 @@ class MunkaController extends Controller
             
         }
         else{
-            $felhasznalo -> delete();
+            $munka -> delete();
             return response('Munka eltávolítva az adatbázisból.', 202);
         }
     }
