@@ -28,7 +28,8 @@ class MunkaController extends Controller
             'auto'=>'required',
             'felhasznalo'=>'required',
             'takarito'=>'required',
-            'datum' => 'required'
+            'datum' => 'required',
+            'ar'=>'required'
         ]);
         if($validator->fails())
         {
@@ -61,7 +62,8 @@ class MunkaController extends Controller
             'auto'=>'required',
             'felhasznalo'=>'required',
             'takarito'=>'required',
-            'datum' => 'required'
+            'datum' => 'required',
+            'ar'=>'required'
             ]);
 
             if($validator->fails())

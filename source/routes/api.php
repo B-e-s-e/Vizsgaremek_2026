@@ -33,8 +33,3 @@ Route::post('/munkak', [MunkaController::class, 'store']);
 Route::put('/munkak/update/{id}', [MunkaController::class, 'update']);
 Route::delete('/munkak/delete/{id}', [MunkaController::class, 'destroy']);
 
-Route::get('/szolg', [SzolgaltatasController::class, 'index']);
-Route::get('/szolg/getByPrice', [SzolgaltatasController::class, 'getByPrice']);
-Route::post('/szolg', [SzolgaltatasController::class, 'store']);
-Route::put('/szolg/update/{id}', [SzolgaltatasController::class, 'update']);
-Route::delete('/szolg/delete/{id}', [SzolgaltatasController::class, 'destroy']);

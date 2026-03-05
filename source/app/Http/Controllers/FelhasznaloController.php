@@ -22,7 +22,8 @@ class FelhasznaloController extends Controller
         [
             'nev'=>'required',
             'phonenumber'=>'required',
-            'email'=>'required'
+            'email'=>'required',
+            'jelszo'=>'required'
         ]);
         if($validator->fails())
         {
@@ -44,7 +45,8 @@ class FelhasznaloController extends Controller
             [
             'nev'=>'required',
             'phonenumber'=>'required',
-            'email'=>'required'
+            'email'=>'required',
+            'jelszo'=>'required'
             ]);
 
             if($validator->fails())

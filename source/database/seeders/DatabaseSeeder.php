@@ -7,112 +7,147 @@ use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
+    public function run()
     {
-        /* ================= FELHASZNALOK ================= */
+        // Felhasználók
         DB::table('felhasznalok')->insert([
-            ['nev'=>'Kovács István','phonenumber'=>'06201110001','email'=>'istvan.kovacs1@example.com'],
-            ['nev'=>'Szabó Mária','phonenumber'=>'06201110002','email'=>'maria.szabo2@example.com'],
-            ['nev'=>'Varga Lajos','phonenumber'=>'06201110003','email'=>'lajos.varga3@example.com'],
-            ['nev'=>'Horváth Kitti','phonenumber'=>'06201110004','email'=>'kitti.horvath4@example.com'],
-            ['nev'=>'Török Zsófi','phonenumber'=>'06201110005','email'=>'zsofi.torok5@example.com'],
-            ['nev'=>'Lakatos Béla','phonenumber'=>'06201110006','email'=>'bela.lakatos6@example.com'],
-            ['nev'=>'Farkas Edit','phonenumber'=>'06201110007','email'=>'edit.farkas7@example.com'],
-            ['nev'=>'Szalai Attila','phonenumber'=>'06201110008','email'=>'attila.szalai8@example.com'],
-            ['nev'=>'Tóth Nóra','phonenumber'=>'06201110009','email'=>'nora.toth9@example.com'],
-            ['nev'=>'Molnár Erika','phonenumber'=>'06201110010','email'=>'erika.molnar10@example.com'],
-            ['nev'=>'Jakab Imre','phonenumber'=>'06201110011','email'=>'imre.jakab11@example.com'],
-            ['nev'=>'Balogh Csilla','phonenumber'=>'06201110012','email'=>'csilla.balogh12@example.com'],
-            ['nev'=>'Oláh Dénes','phonenumber'=>'06201110013','email'=>'denes.olah13@example.com'],
-            ['nev'=>'Papp Lili','phonenumber'=>'06201110014','email'=>'lili.papp14@example.com'],
-            ['nev'=>'Kocsis Máté','phonenumber'=>'06201110015','email'=>'mate.kocsis15@example.com'],
-            ['nev'=>'Fehér Réka','phonenumber'=>'06201110016','email'=>'reka.feher16@example.com'],
-            ['nev'=>'Nemes Gergő','phonenumber'=>'06201110017','email'=>'gergo.nemes17@example.com'],
-            ['nev'=>'Halász Dóra','phonenumber'=>'06201110018','email'=>'dora.halasz18@example.com'],
-            ['nev'=>'Veres András','phonenumber'=>'06201110019','email'=>'andras.veres19@example.com'],
-            ['nev'=>'Bognár Lili','phonenumber'=>'06201110020','email'=>'lili.bognar20@example.com'],
-            ['nev'=>'Major László','phonenumber'=>'06201110021','email'=>'laszlo.major21@example.com'],
-            ['nev'=>'Sipos Petra','phonenumber'=>'06201110022','email'=>'petra.sipos22@example.com'],
-            ['nev'=>'Király Áron','phonenumber'=>'06201110023','email'=>'aron.kiraly23@example.com'],
-            ['nev'=>'Tamás Levente','phonenumber'=>'06201110024','email'=>'levente.tamas24@example.com'],
-            ['nev'=>'Gulyás Hanna','phonenumber'=>'06201110025','email'=>'hanna.gulyas25@example.com'],
-            ['nev'=>'Barta Ádám','phonenumber'=>'06201110026','email'=>'adam.barta26@example.com'],
-            ['nev'=>'Mészáros Klára','phonenumber'=>'06201110027','email'=>'klara.meszaros27@example.com'],
-            ['nev'=>'Orbán Dávid','phonenumber'=>'06201110028','email'=>'david.orban28@example.com'],
-            ['nev'=>'Huber Marcell','phonenumber'=>'06201110029','email'=>'marcell.huber29@example.com'],
-            ['nev'=>'Pintér Lili','phonenumber'=>'06201110030','email'=>'lili.pinter30@example.com'],
-            ['nev'=>'Boros Gábor','phonenumber'=>'06201110031','email'=>'gabor.boros31@example.com'],
-            ['nev'=>'Vass Regina','phonenumber'=>'06201110032','email'=>'regina.vass32@example.com'],
-            ['nev'=>'Tánczos Bence','phonenumber'=>'06201110033','email'=>'bence.tanczos33@example.com'],
-            ['nev'=>'Kelemen Eszter','phonenumber'=>'06201110034','email'=>'eszter.kelemen34@example.com'],
-            ['nev'=>'Orosz Júlia','phonenumber'=>'06201110035','email'=>'julia.orosz35@example.com'],
-            ['nev'=>'Lovas Soma','phonenumber'=>'06201110036','email'=>'soma.lovas36@example.com'],
-            ['nev'=>'Barna Zoltán','phonenumber'=>'06201110037','email'=>'zoltan.barna37@example.com'],
-            ['nev'=>'Házi Dénes','phonenumber'=>'06201110038','email'=>'denes.hazi38@example.com'],
-            ['nev'=>'Márton Boglárka','phonenumber'=>'06201110039','email'=>'boglarka.marton39@example.com'],
-            ['nev'=>'Csonka Kevin','phonenumber'=>'06201110040','email'=>'kevin.csonka40@example.com'],
+            ['id'=>1,'nev'=>'Kovács István','phonenumber'=>'06201110001','email'=>'istvan.kovacs1@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>2,'nev'=>'Szabó Mária','phonenumber'=>'06201110002','email'=>'maria.szabo2@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>3,'nev'=>'Varga Lajos','phonenumber'=>'06201110003','email'=>'lajos.varga3@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>4,'nev'=>'Horváth Kitti','phonenumber'=>'06201110004','email'=>'kitti.horvath4@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>5,'nev'=>'Török Zsófi','phonenumber'=>'06201110005','email'=>'zsofi.torok5@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>6,'nev'=>'Lakatos Béla','phonenumber'=>'06201110006','email'=>'bela.lakatos6@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>7,'nev'=>'Farkas Edit','phonenumber'=>'06201110007','email'=>'edit.farkas7@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>8,'nev'=>'Szalai Attila','phonenumber'=>'06201110008','email'=>'attila.szalai8@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>9,'nev'=>'Tóth Nóra','phonenumber'=>'06201110009','email'=>'nora.toth9@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>10,'nev'=>'Molnár Erika','phonenumber'=>'06201110010','email'=>'erika.molnar10@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>11,'nev'=>'Jakab Imre','phonenumber'=>'06201110011','email'=>'imre.jakab11@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>12,'nev'=>'Balogh Csilla','phonenumber'=>'06201110012','email'=>'csilla.balogh12@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>13,'nev'=>'Oláh Dénes','phonenumber'=>'06201110013','email'=>'denes.olah13@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>14,'nev'=>'Papp Lili','phonenumber'=>'06201110014','email'=>'lili.papp14@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>15,'nev'=>'Kocsis Máté','phonenumber'=>'06201110015','email'=>'mate.kocsis15@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>16,'nev'=>'Fehér Réka','phonenumber'=>'06201110016','email'=>'reka.feher16@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>17,'nev'=>'Nemes Gergő','phonenumber'=>'06201110017','email'=>'gergo.nemes17@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>18,'nev'=>'Halász Dóra','phonenumber'=>'06201110018','email'=>'dora.halasz18@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>19,'nev'=>'Veres András','phonenumber'=>'06201110019','email'=>'andras.veres19@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>20,'nev'=>'Bognár Lili','phonenumber'=>'06201110020','email'=>'lili.bognar20@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>21,'nev'=>'Major László','phonenumber'=>'06201110021','email'=>'laszlo.major21@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>22,'nev'=>'Sipos Petra','phonenumber'=>'06201110022','email'=>'petra.sipos22@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>23,'nev'=>'Király Áron','phonenumber'=>'06201110023','email'=>'aron.kiraly23@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>24,'nev'=>'Tamás Levente','phonenumber'=>'06201110024','email'=>'levente.tamas24@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>25,'nev'=>'Gulyás Hanna','phonenumber'=>'06201110025','email'=>'hanna.gulyas25@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>26,'nev'=>'Barta Ádám','phonenumber'=>'06201110026','email'=>'adam.barta26@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>27,'nev'=>'Mészáros Klára','phonenumber'=>'06201110027','email'=>'klara.meszaros27@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>28,'nev'=>'Orbán Dávid','phonenumber'=>'06201110028','email'=>'david.orban28@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>29,'nev'=>'Huber Marcell','phonenumber'=>'06201110029','email'=>'marcell.huber29@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>30,'nev'=>'Pintér Lili','phonenumber'=>'06201110030','email'=>'lili.pinter30@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>31,'nev'=>'Boros Gábor','phonenumber'=>'06201110031','email'=>'gabor.boros31@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>32,'nev'=>'Vass Regina','phonenumber'=>'06201110032','email'=>'regina.vass32@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>33,'nev'=>'Tánczos Bence','phonenumber'=>'06201110033','email'=>'bence.tanczos33@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>34,'nev'=>'Kelemen Eszter','phonenumber'=>'06201110034','email'=>'eszter.kelemen34@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>35,'nev'=>'Orosz Júlia','phonenumber'=>'06201110035','email'=>'julia.orosz35@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>36,'nev'=>'Lovas Soma','phonenumber'=>'06201110036','email'=>'soma.lovas36@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>37,'nev'=>'Barna Zoltán','phonenumber'=>'06201110037','email'=>'zoltan.barna37@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>38,'nev'=>'Házi Dénes','phonenumber'=>'06201110038','email'=>'denes.hazi38@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>39,'nev'=>'Márton Boglárka','phonenumber'=>'06201110039','email'=>'boglarka.marton39@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
+            ['id'=>40,'nev'=>'Csonka Kevin','phonenumber'=>'06201110040','email'=>'kevin.csonka40@example.com','jelszo'=>'$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9zC2Xl7C3eF1Y5jQ6Y9G2G'],
         ]);
 
-        /* ================= TAKARITOK ================= */
-        DB::table('takaritok')->insert(
-            collect(range(1,40))->map(fn($i) => [
-                'nev' => [
-                    'Bíró Tamás','Varga Csaba','Tóth Zoltán','Kiss Laura','Molnár Bence',
-                    'Horváth Eszter','Kovács Richárd','Szabó Dániel','Farkas Fanni','Papp Balázs',
-                    'Olivér Nagy','Török Edina','Kelemen Balázs','Szalai Lilla','Király Norbert',
-                    'Boros Rebeka','Nemes Viktor','Vass Emese','Barta Gergely','Orosz Réka',
-                    'Sipos Dániel','Lakatos Bettina','Fehér Tamara','Jakab Olivér','Major Csilla',
-                    'Oláh Márton','Veres Fanni','Bognár Levente','Huber Vivien','Pintér Kevin',
-                    'Balogh Zita','Halász Máté','Barna Dóra','Mészáros László','Orbán Patrik',
-                    'Gulyás Noémi','Tánczos Milán','Lovas Virág','Kocsis Bálint','Csonka Dorina'
-                ][$i-1],
-                'phonenumber' => '067090000' . str_pad($i, 2, '0', STR_PAD_LEFT)
-            ])->toArray()
-        );
+        // Autók
+        DB::table('autok')->insert([
+            ['id'=>1,'marka'=>'Audi','tipus'=>'A4','evjarat'=>1994,'rendszam'=>'AILR-435','felhasznalo'=>1],
+            ['id'=>2,'marka'=>'Honda','tipus'=>'Civic','evjarat'=>2017,'rendszam'=>'AAA-102','felhasznalo'=>2],
+            ['id'=>3,'marka'=>'BMW','tipus'=>'320d','evjarat'=>2020,'rendszam'=>'AAA-103','felhasznalo'=>3],
+            ['id'=>4,'marka'=>'Audi','tipus'=>'A4','evjarat'=>2018,'rendszam'=>'AAA-104','felhasznalo'=>4],
+            ['id'=>5,'marka'=>'Mercedes','tipus'=>'C200','evjarat'=>2021,'rendszam'=>'AAA-105','felhasznalo'=>5],
+            ['id'=>6,'marka'=>'Ford','tipus'=>'Mondeo','evjarat'=>2016,'rendszam'=>'AAA-106','felhasznalo'=>6],
+            ['id'=>7,'marka'=>'Opel','tipus'=>'Astra','evjarat'=>2015,'rendszam'=>'AAA-107','felhasznalo'=>7],
+            ['id'=>8,'marka'=>'Kia','tipus'=>'Ceed','evjarat'=>2020,'rendszam'=>'AAA-108','felhasznalo'=>8],
+            ['id'=>9,'marka'=>'Hyundai','tipus'=>'i30','evjarat'=>2019,'rendszam'=>'AAA-109','felhasznalo'=>9],
+            ['id'=>10,'marka'=>'Skoda','tipus'=>'Octavia','evjarat'=>2018,'rendszam'=>'AAA-110','felhasznalo'=>10],
+            ['id'=>11,'marka'=>'Seat','tipus'=>'Leon','evjarat'=>2017,'rendszam'=>'AAA-111','felhasznalo'=>11],
+            ['id'=>12,'marka'=>'Mazda','tipus'=>'3','evjarat'=>2020,'rendszam'=>'AAA-112','felhasznalo'=>12],
+            ['id'=>13,'marka'=>'Volvo','tipus'=>'S60','evjarat'=>2019,'rendszam'=>'AAA-113','felhasznalo'=>13],
+            ['id'=>14,'marka'=>'Renault','tipus'=>'Megane','evjarat'=>2018,'rendszam'=>'AAA-114','felhasznalo'=>14],
+            ['id'=>15,'marka'=>'Peugeot','tipus'=>'308','evjarat'=>2017,'rendszam'=>'AAA-115','felhasznalo'=>15],
+            ['id'=>16,'marka'=>'Citroen','tipus'=>'C4','evjarat'=>2016,'rendszam'=>'AAA-116','felhasznalo'=>16],
+            ['id'=>17,'marka'=>'Dacia','tipus'=>'Duster','evjarat'=>2021,'rendszam'=>'AAA-117','felhasznalo'=>17],
+            ['id'=>18,'marka'=>'Suzuki','tipus'=>'Swift','evjarat'=>2019,'rendszam'=>'AAA-118','felhasznalo'=>18],
+            ['id'=>19,'marka'=>'Fiat','tipus'=>'Tipo','evjarat'=>2018,'rendszam'=>'AAA-119','felhasznalo'=>19],
+            ['id'=>20,'marka'=>'Nissan','tipus'=>'Qashqai','evjarat'=>2020,'rendszam'=>'AAA-120','felhasznalo'=>20],
+            ['id'=>21,'marka'=>'Toyota','tipus'=>'Corolla','evjarat'=>2021,'rendszam'=>'AAA-121','felhasznalo'=>21],
+            ['id'=>22,'marka'=>'BMW','tipus'=>'X3','evjarat'=>2018,'rendszam'=>'AAA-122','felhasznalo'=>22],
+            ['id'=>23,'marka'=>'Audi','tipus'=>'Q5','evjarat'=>2019,'rendszam'=>'AAA-123','felhasznalo'=>23],
+            ['id'=>24,'marka'=>'Volkswagen','tipus'=>'Passat','evjarat'=>2017,'rendszam'=>'AAA-124','felhasznalo'=>24],
+            ['id'=>25,'marka'=>'Mazda','tipus'=>'CX-5','evjarat'=>2020,'rendszam'=>'AAA-125','felhasznalo'=>25],
+            ['id'=>26,'marka'=>'Hyundai','tipus'=>'Tucson','evjarat'=>2021,'rendszam'=>'AAA-126','felhasznalo'=>26],
+            ['id'=>27,'marka'=>'Kia','tipus'=>'Sportage','evjarat'=>2018,'rendszam'=>'AAA-127','felhasznalo'=>27],
+            ['id'=>28,'marka'=>'Ford','tipus'=>'Focus','evjarat'=>2017,'rendszam'=>'AAA-128','felhasznalo'=>28],
+            ['id'=>29,'marka'=>'Honda','tipus'=>'Jazz','evjarat'=>2016,'rendszam'=>'AAA-129','felhasznalo'=>29],
+            ['id'=>30,'marka'=>'Mercedes','tipus'=>'GLA','evjarat'=>2019,'rendszam'=>'AAA-130','felhasznalo'=>30],
+            ['id'=>31,'marka'=>'Opel','tipus'=>'Corsa','evjarat'=>2020,'rendszam'=>'AAA-131','felhasznalo'=>31],
+            ['id'=>32,'marka'=>'Renault','tipus'=>'Clio','evjarat'=>2018,'rendszam'=>'AAA-132','felhasznalo'=>32],
+            ['id'=>33,'marka'=>'Skoda','tipus'=>'Fabia','evjarat'=>2017,'rendszam'=>'AAA-133','felhasznalo'=>33],
+            ['id'=>34,'marka'=>'Seat','tipus'=>'Ibiza','evjarat'=>2016,'rendszam'=>'AAA-134','felhasznalo'=>34],
+            ['id'=>35,'marka'=>'Peugeot','tipus'=>'208','evjarat'=>2019,'rendszam'=>'AAA-135','felhasznalo'=>35],
+            ['id'=>36,'marka'=>'Suzuki','tipus'=>'Vitara','evjarat'=>2021,'rendszam'=>'AAA-136','felhasznalo'=>36],
+            ['id'=>37,'marka'=>'Nissan','tipus'=>'Micra','evjarat'=>2018,'rendszam'=>'AAA-137','felhasznalo'=>37],
+            ['id'=>38,'marka'=>'Volvo','tipus'=>'V40','evjarat'=>2017,'rendszam'=>'AAA-138','felhasznalo'=>38],
+            ['id'=>39,'marka'=>'Fiat','tipus'=>'Panda','evjarat'=>2016,'rendszam'=>'AAA-139','felhasznalo'=>39],
+            ['id'=>40,'marka'=>'Toyota','tipus'=>'Avensis','evjarat'=>2015,'rendszam'=>'AAA-140','felhasznalo'=>40],
+        ]);
 
-        /* ================= AUTOK ================= */
-        DB::table('autok')->insert(
-            collect(range(1,40))->map(fn($i) => [
-                'marka' => [
-                    'Toyota','Honda','BMW','Audi','Mercedes','Ford','Opel','Kia','Hyundai','Skoda',
-                    'Seat','Mazda','Volvo','Renault','Peugeot','Citroen','Dacia','Suzuki','Fiat','Nissan',
-                    'Toyota','BMW','Audi','Volkswagen','Mazda','Hyundai','Kia','Ford','Honda','Mercedes',
-                    'Opel','Renault','Skoda','Seat','Peugeot','Suzuki','Nissan','Volvo','Fiat','Toyota'
-                ][$i-1],
-                'tipus' => [
-                    'Yaris','Civic','320d','A4','C200','Mondeo','Astra','Ceed','i30','Octavia',
-                    'Leon','3','S60','Megane','308','C4','Duster','Swift','Tipo','Qashqai',
-                    'Corolla','X3','Q5','Passat','CX-5','Tucson','Sportage','Focus','Jazz','GLA',
-                    'Corsa','Clio','Fabia','Ibiza','208','Vitara','Micra','V40','Panda','Avensis'
-                ][$i-1],
-                'evjarat' => [2019,2017,2020,2018,2021,2016,2015,2020,2019,2018,2017,2020,2019,2018,2017,2016,2021,2019,2018,2020,2021,2018,2019,2017,2020,2021,2018,2017,2016,2019,2020,2018,2017,2016,2019,2021,2018,2017,2016,2015][$i-1],
-                'rendszam' => 'AAA-' . (100 + $i),
-                'felhasznalo' => $i
-            ])->toArray()
-        );
+        // Takarítók
+        DB::table('takaritok')->insert([
+            ['id'=>1,'nev'=>'Bíró Tamás','phonenumber'=>'06709000001'],
+            ['id'=>2,'nev'=>'Varga Csaba','phonenumber'=>'06709000002'],
+            ['id'=>3,'nev'=>'Tóth Zoltán','phonenumber'=>'06709000003'],
+            ['id'=>4,'nev'=>'Kiss Laura','phonenumber'=>'06709000004'],
+            ['id'=>5,'nev'=>'Molnár Bence','phonenumber'=>'06709000005'],
+        ]);
 
-        /* ================= MUNKAK ================= */
-        DB::table('munkak')->insert(
-            collect(range(1,40))->map(fn($i) => [
-                'auto' => $i,
-                'felhasznalo' => $i,
-                'takarito' => $i,
-                'datum' => now()->startOfYear()->addDays($i * 3)->toDateString()
-            ])->toArray()
-        );
-
-        /* ================= SZOLGALTATASOK ================= */
-        DB::table('szolgaltatasok')->insert(
-            collect(range(1,40))->map(fn($i) => [
-                'munka' => $i,
-                'ar' => [15000,18000,12000,20000,10000,16000,13500,22000,17500,14500,
-                         19000,21000,12500,9500,18500,17000,20000,15500,12000,23000,
-                         14000,16500,18000,19500,21000,17500,15500,16000,14500,24000,
-                         22000,13500,18000,15000,20000,23000,17000,15500,19000,16500][$i-1]
-            ])->toArray()
-        );
+        // Munkák
+        DB::table('munkak')->insert([
+            ['id'=>1,'auto'=>1,'felhasznalo'=>1,'takarito'=>1,'datum'=>'2026-01-04','ar'=>15000],
+            ['id'=>2,'auto'=>2,'felhasznalo'=>2,'takarito'=>2,'datum'=>'2026-01-07','ar'=>18000],
+            ['id'=>3,'auto'=>3,'felhasznalo'=>3,'takarito'=>3,'datum'=>'2026-01-10','ar'=>12000],
+            ['id'=>4,'auto'=>4,'felhasznalo'=>4,'takarito'=>4,'datum'=>'2026-01-13','ar'=>20000],
+            ['id'=>5,'auto'=>5,'felhasznalo'=>5,'takarito'=>5,'datum'=>'2026-01-16','ar'=>10000],
+            ['id'=>6,'auto'=>6,'felhasznalo'=>6,'takarito'=>1,'datum'=>'2026-01-19','ar'=>16000],
+            ['id'=>7,'auto'=>7,'felhasznalo'=>7,'takarito'=>2,'datum'=>'2026-01-22','ar'=>13500],
+            ['id'=>8,'auto'=>8,'felhasznalo'=>8,'takarito'=>3,'datum'=>'2026-01-25','ar'=>22000],
+            ['id'=>9,'auto'=>9,'felhasznalo'=>9,'takarito'=>4,'datum'=>'2026-01-28','ar'=>17500],
+            ['id'=>10,'auto'=>10,'felhasznalo'=>10,'takarito'=>5,'datum'=>'2026-01-31','ar'=>14500],
+            ['id'=>11,'auto'=>11,'felhasznalo'=>11,'takarito'=>1,'datum'=>'2026-02-03','ar'=>19000],
+            ['id'=>12,'auto'=>12,'felhasznalo'=>12,'takarito'=>2,'datum'=>'2026-02-06','ar'=>21000],
+            ['id'=>13,'auto'=>13,'felhasznalo'=>13,'takarito'=>3,'datum'=>'2026-02-09','ar'=>12500],
+            ['id'=>14,'auto'=>14,'felhasznalo'=>14,'takarito'=>4,'datum'=>'2026-02-12','ar'=>9500],
+            ['id'=>15,'auto'=>15,'felhasznalo'=>15,'takarito'=>5,'datum'=>'2026-02-15','ar'=>18500],
+            ['id'=>16,'auto'=>16,'felhasznalo'=>16,'takarito'=>1,'datum'=>'2026-02-18','ar'=>17000],
+            ['id'=>17,'auto'=>17,'felhasznalo'=>17,'takarito'=>2,'datum'=>'2026-02-21','ar'=>20000],
+            ['id'=>18,'auto'=>18,'felhasznalo'=>18,'takarito'=>3,'datum'=>'2026-02-24','ar'=>15500],
+            ['id'=>19,'auto'=>19,'felhasznalo'=>19,'takarito'=>4,'datum'=>'2026-02-27','ar'=>12000],
+            ['id'=>20,'auto'=>20,'felhasznalo'=>20,'takarito'=>5,'datum'=>'2026-03-02','ar'=>23000],
+            ['id'=>21,'auto'=>21,'felhasznalo'=>21,'takarito'=>1,'datum'=>'2026-03-05','ar'=>14000],
+            ['id'=>22,'auto'=>22,'felhasznalo'=>22,'takarito'=>2,'datum'=>'2026-03-08','ar'=>16500],
+            ['id'=>23,'auto'=>23,'felhasznalo'=>23,'takarito'=>3,'datum'=>'2026-03-11','ar'=>18000],
+            ['id'=>24,'auto'=>24,'felhasznalo'=>24,'takarito'=>4,'datum'=>'2026-03-14','ar'=>19500],
+            ['id'=>25,'auto'=>25,'felhasznalo'=>25,'takarito'=>5,'datum'=>'2026-03-17','ar'=>21000],
+            ['id'=>26,'auto'=>26,'felhasznalo'=>26,'takarito'=>1,'datum'=>'2026-03-20','ar'=>17500],
+            ['id'=>27,'auto'=>27,'felhasznalo'=>27,'takarito'=>2,'datum'=>'2026-03-23','ar'=>15500],
+            ['id'=>28,'auto'=>28,'felhasznalo'=>28,'takarito'=>3,'datum'=>'2026-03-26','ar'=>16000],
+            ['id'=>29,'auto'=>29,'felhasznalo'=>29,'takarito'=>4,'datum'=>'2026-03-29','ar'=>14500],
+            ['id'=>30,'auto'=>30,'felhasznalo'=>30,'takarito'=>5,'datum'=>'2026-04-01','ar'=>24000],
+            ['id'=>31,'auto'=>31,'felhasznalo'=>31,'takarito'=>1,'datum'=>'2026-04-04','ar'=>22000],
+            ['id'=>32,'auto'=>32,'felhasznalo'=>32,'takarito'=>2,'datum'=>'2026-04-07','ar'=>13500],
+            ['id'=>33,'auto'=>33,'felhasznalo'=>33,'takarito'=>3,'datum'=>'2026-04-10','ar'=>18000],
+            ['id'=>34,'auto'=>34,'felhasznalo'=>34,'takarito'=>4,'datum'=>'2026-04-13','ar'=>15000],
+            ['id'=>35,'auto'=>35,'felhasznalo'=>35,'takarito'=>5,'datum'=>'2026-04-16','ar'=>20000],
+            ['id'=>36,'auto'=>36,'felhasznalo'=>36,'takarito'=>1,'datum'=>'2026-04-19','ar'=>23000],
+            ['id'=>37,'auto'=>37,'felhasznalo'=>37,'takarito'=>2,'datum'=>'2026-04-22','ar'=>17000],
+            ['id'=>38,'auto'=>38,'felhasznalo'=>38,'takarito'=>3,'datum'=>'2026-04-25','ar'=>15500],
+            ['id'=>39,'auto'=>39,'felhasznalo'=>39,'takarito'=>4,'datum'=>'2026-04-28','ar'=>19000],
+            ['id'=>40,'auto'=>40,'felhasznalo'=>40,'takarito'=>5,'datum'=>'2026-05-01','ar'=>16500],
+        ]);
     }
 }
